@@ -1,0 +1,415 @@
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+/* This file is for your main application CSS */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 2.2vh;
+    color: #000000;
+	font-family: 'Red Hat Mono', monospace;
+	line-height: 1.75;
+    text-align: center;
+	background: #dbd3d8;
+    animation-name: fade-in;
+
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fade-in {
+    /* The fade-in animation */
+    0% {
+        opacity:0;
+    }
+
+    50% {
+        opacity:0;
+    }
+
+    100% {
+        opacity:1;
+    }
+}
+
+a {
+	color: white;
+	font-weight: bold;
+	text-decoration-color: red;
+}
+
+img {
+	display: block;
+	width: 100%;   
+	height: auto;
+	max-width: 100%;
+}
+
+svg {
+	width: auto;
+	height: 1em;
+}
+
+.c {
+	max-width: 120vmin; /* formerly body - width: 96vmin; */
+	margin-left: auto;
+    margin-right: auto;
+	padding-right: 5vmin;
+	padding-left: 5vmin;
+}
+
+.anchor-margin {
+    /* So that the nav bar doesn't block the titles when linked to by an anchor */
+    height: 7vmin;
+}
+
+h1,
+h2,
+h3,
+h4,
+.title {
+	color: #fff;
+	line-height: 1.25;
+}
+
+h1,
+h2,
+.h2 {
+	/* Keep some space from the previous paragraph */
+	margin-top: 1.6em;
+	margin-bottom: .75em;
+	font-size: 200%;
+}
+
+h1 {
+	font-size: 250%;
+}
+
+h3,
+.h3,
+h4 {
+	margin-top: 1.6em;
+	margin-bottom: 1em;
+	font-size: 150%;
+	line-height: 1.5;
+}
+
+.team h3 {
+	font-size: 112.5%;
+}
+
+h4 {
+	font-size: 100%;
+}
+
+p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+strong {
+	color: #fff;
+}
+
+ul {
+	padding-left: 1.5em;
+}
+
+.embed {
+	position: relative;
+	padding-top: 56.25%;
+}
+
+iframe {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+header {
+    /* position: sticky;
+    top: 0;
+	z-index: 2;
+    padding: 3vmin 0;
+	line-height: 1.25;
+    
+    background-color: rgba(0, 0, 0, 1); */
+	z-index: 2;
+    display: flex;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    padding: 10px;
+}
+
+header .f {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header .logo img {
+	display: flex;
+	width: 10vmin;
+	height: auto;
+}
+
+header .links {
+    display: flex;
+    gap: 0.375em;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.title {
+	display: flex-end;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+    flex-grow: 1;
+    margin-right: 110px;
+    text-align: center;
+}
+
+.games ul {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(2,minmax(0,1fr));
+	gap: 5vmin;
+	padding: 0;
+	text-align: center;
+}
+
+.games li {
+	display: flex;
+	flex-direction: column;
+}
+
+.games .btn {
+	padding: 5vmin;
+	color: #fff;
+	font-size: 125%;
+	line-height: 1.25;
+	text-decoration: none;
+	background: rgba(255,255,255,.1);
+	border-radius: 2vmin;
+}
+
+.games a.btn {
+	color: #000;
+	background: rgba(255,255,255,1);
+}
+
+.games a.btn svg {
+	transition: all 300ms ease;
+}
+
+.games a.btn:focus svg,
+.games a.btn:hover svg {
+	color: red;
+}
+
+.games span.btn {
+	font-style: italic;
+	opacity: .6;
+}
+
+.games svg {
+	height: 2em;
+	margin-bottom: .125em;
+}
+
+.games .when {
+	font-size: 62.5%;
+}
+
+.team {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5vmin;
+}
+
+.team > * {
+	display: flex;
+	gap: 5vmin;
+	width: 100%;
+}
+
+.team > * a {
+	width: 25%;
+	min-width: 25%;
+}
+
+.team h3 {
+	margin-top: 0;
+	margin-bottom: .125em;
+}
+
+.team .title {
+	font-size: 68.75%;
+}
+
+.team ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .625vmin;
+	margin: 2.5vmin 0 0;
+	font-size: 62.5%;
+	line-height: 1.5;
+}
+
+.team li {
+	width: 100%;
+	min-width: 100%;
+}
+
+footer {
+	padding: 5vmin 0;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    /* Custom scrollbar settings*/
+    width: 1.5vmin;
+}
+
+::-webkit-scrollbar-thumb {
+    /* Custom scrollbar settings*/
+    background: white;
+    border-radius: 0.5vmin;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+
+/* app.css */
+
+#koto-cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+  }
+  
+  #koto-cards .card {
+	transition: transform 0.3s ease; /* Smooth transition for scaling */
+  }
+  
+  #koto-cards .card:hover {
+	transform: scale(1.02); /* Increase size by 10% on hover */
+  }
+
+  .card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 300px;
+	margin-bottom: 16px;
+	border: 1px solid #ccc; /* Add a frame with a light grey color */
+	border-radius: 10px; /* Round the corners with a 10px radius */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+	padding: 16px; /* Add some padding inside the card */
+	background-color: #ffe6e6; /* Optional: set a background color for the card */
+  }
+  
+/* styles.css */
+
+@keyframes glow {
+	0%, 100% {
+	  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	}
+	50% {
+	  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+	}
+  }
+  
+ /* styles.css */
+
+/* styles.css */
+
+@keyframes sparkle {
+	0% {
+	  transform: translateX(-100%); /* Start from the left, outside the image */
+	}
+	50% {
+	  /* The bright center of the gradient is aligned with the middle of the element */
+	  transform: translateX(0%);
+	}
+	100% {
+	  transform: translateX(100%); /* End at the right, outside the image */
+	}
+  }
+  
+  .card img {
+	position: relative;
+	overflow: hidden; /* Ensure the sparkle effect doesn't go outside the image */
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+	animation: glow 2s infinite ease-in-out;
+	z-index: 1; /* This ensures that the image has a stacking context */
+  }
+  
+  .card img::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+	  to right,
+	  rgba(255, 255, 255, 0) 0%,
+	  rgba(255, 255, 255, 0.8) 50%, /* Stronger white for visibility */
+	  rgba(255, 255, 255, 0) 100%
+	);
+	opacity: 0; /* Start invisible */
+	z-index: 2; /* Ensure it's above the image */
+	animation: sparkle 3s infinite linear forwards; /* Adjust duration as needed */
+  }
+
+  .card-attributes {
+	width: 100%;
+	padding: 0;
+	list-style: none;
+	font-size: 0.8rem; /* Smaller font size */
+  }
+  
+  .card-attributes li {
+	margin-bottom: 4px; /* Add some space between list items */
+  }
+  
+  #compare-buttons {
+	margin-top: 20px;
+  }
+  
+  #result {
+	margin-top: 20px;
+  }
+
+/* In your CSS file */
+.small-image {
+	width: 50px;  /* Or any other size */
+	height: auto;
+	display: inline-block; /* Make the image inline-block */
+	vertical-align: middle; /* Align the image vertically */
+  }
+  
+  .koto-name {
+	display: inline-block; /* Make the name inline-block */
+	vertical-align: middle; /* Align the name vertically */
+	margin-left: 10px; /* Add some space between the image and the text */
+  }

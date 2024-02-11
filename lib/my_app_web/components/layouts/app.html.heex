@@ -1,0 +1,21 @@
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href={~p"/images/favicon.png"} />
+</head>
+
+<header>
+    <div class="logo">
+      <a href="https://www.biggestlab.io/">
+        <img src={~p"/images/BIGLAB_logo.png"} />
+      </a>
+    </div>
+    <div class="title">
+    <h4> Welcome to Neko Neko Live</h4>
+    </div>
+</header>
+
+<main class="px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl">
+    <.flash_group flash={@flash} />
+    <%= @inner_content %>
+  </div>
+</main>
